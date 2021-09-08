@@ -1,0 +1,37 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+.form{
+    background: linear-gradient(to bottom,#2d91d5,#1875b3);
+    border: 10px;
+    box-shadow: 1px 1px 1px 1px,#eee;
+    padding: 40px;
+}
+.text{
+    color: #fff;
+}
+.input{
+    width: calc(100% - 23px);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    color: #000;
+}
+.button{
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+}
+.link{
+    
+}
+@media screen and (min-width:450px){
+    .form{
+        width: 450px;
+        
+    }
+}

@@ -1,0 +1,41 @@
+
+.wrapper{
+
+}
+.uploadAvatarContainer{
+    position: relative;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+.uploadAvatar{
+    display: none;
+    visibility: hidden;
+
+}
+.avartar{
+    width: 100%;
+    height: 100%;
+}
+.labelUploadAvatar{
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateX(-50%);
+    color: var(--white);
+    background: rgba($color: #696868, $alpha: 0.5);
+}
+.labelUploadAvatar:hover{
+    cursor: pointer;
+}
+
+@media screen and(min-width:450px) {
+  .uploadAvatarContainer {
+    width: 200px;
+    height: 200px;
+  }
+}

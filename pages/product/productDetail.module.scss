@@ -1,0 +1,31 @@
+.wrapper{
+
+}
+.container{
+    display: grid;
+    grid-template-columns: 570px 860px;
+    grid-gap: 10px;
+    
+}
+.content{
+    padding: 15px;
+}
+.title{
+    font-size: 26px;
+    font-weight: 600;
+    padding-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.price{
+    font-size: 18px;
+    text-decoration: line-through;
+}
+.price1{
+    font-size: 22px;
+    font-weight: 600;
+}
