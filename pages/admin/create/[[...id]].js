@@ -1,15 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
-import Button from "../../components/Button";
-import Input from "../../components/Input";
-import { DataContext } from "../../store/GlobaState";
+import Button from "../../../components/Button";
+import Input from "../../../components/Input";
+import { DataContext } from "../../../store/GlobaState";
 import Select from "react-select";
 import { useRouter } from "next/router";
 import { AiFillDelete } from "react-icons/ai";
-import UploadImage from "../../untils/uploadImage";
-import { deleteData, getData, postData, putData } from "../../untils/fetchData";
+import UploadImage from "../../../untils/uploadImage";
+import { deleteData, getData, postData, putData } from "../../../untils/fetchData";
 import styles from "./createProduct.module.scss";
-import Modal from "../../components/Modal";
-import { ROUTER } from "../../untils/router";
+import Modal from "../../../components/Modal";
+import { ROUTER } from "../../../untils/router";
+import { createCategory } from "../../../store/Actions";
 
 const ProductManger = () => {
   const initlState = {
@@ -58,6 +59,9 @@ const ProductManger = () => {
   const onChangeSelect = (value, action) => {
     setProduct({ ...product, [action.name]: value.value });
   };
+  const onAddCategory = ()=>{
+    dispath(createCategory(category));
+  }
   const handleUploadImage = (e) => {
     let newImages = [];
     let err = "";
@@ -251,6 +255,7 @@ const ProductManger = () => {
                 label: item.name,
                 value: item._id,
               }))}
+            
           />
         </div>
       </div>

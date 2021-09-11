@@ -6,10 +6,12 @@ import { postData } from "../untils/fetchData";
 import { useRouter } from "next/router";
 import styles from "../styles/signin.module.scss";
 import { ROUTER } from "../untils/router";
+import { useHistory } from "react-router-dom";
+
 
 export default function Sigin() {
   const initalState = { email: "", password: "" };
-  const rouer = useRouter();
+  const router = useRouter();
   const history = useHistory();
   const [userData, setUserData] = useState(initalState);
   const { email, password } = userData;
@@ -43,12 +45,12 @@ export default function Sigin() {
       expires: 7,
     });
     localStorage.setItem("FirstLogin", true);
-    rouer.push(ROUTER.home);
+    router.back();
   };
 
   useEffect(() => {
     if (Object.keys(auth).length > 0) {
-      rouer.push(ROUTER.home);
+      router.back();
     }
   }, [auth]);
 
@@ -77,7 +79,7 @@ export default function Sigin() {
           SignIn
         </button>
         <p className={styles.text}>
-          You don't have a account?{" "}
+          You don't have a account?
           <Link href="/register">
             <a href="/register" className={styles.link}>
               Register

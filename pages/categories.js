@@ -24,10 +24,10 @@ function Categories({}) {
   };
 
   const onCreateCategory = async () => {
-    if (auth.user.isAdmin)
-      dispath({ type: "NOTIFY", payload: { err: "Authentocation" } });
-    if (!name) dispath({ type: "NOTIFY", payload: { err: "Name not blank" } });
-    dispath({ type: "NOTIFY", payload: { loading: true } });
+    if (!auth.user )
+    return  dispath({ type: "NOTIFY", payload: { err: "Authentocation" } });
+    if (!name) return dispath({ type: "NOTIFY", payload: { err: "Name not blank" } });
+       dispath({ type: "NOTIFY", payload: { loading: true } });
 
     let res;
     if (id) {
@@ -65,7 +65,7 @@ function Categories({}) {
     dispath(DeleteItem(categories, category._id, "ADD_CATEGORIES"));
     setCloseModal(false);
   };
-
+  console.log(auth)
   return (
     <div className="category">
       Category
