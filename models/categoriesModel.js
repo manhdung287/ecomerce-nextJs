@@ -6,6 +6,11 @@ const categoriesSechma = new mongose.Schema(
         type:String,
         require:true,
         trim:true
+    },
+    image:{
+      type:String,
+      require:true,
+      trim:true
     }
   },
   {

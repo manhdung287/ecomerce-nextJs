@@ -7,7 +7,7 @@ const productSaleSchema = new mongose.Schema(
         require:true,
         trim:true
     },
-    times:{
+    time:{
         type:Number,
         require:true,
     }
@@ -17,6 +17,6 @@ const productSaleSchema = new mongose.Schema(
   }
 );
 
-let DataSet = mongose.models.peoductSale || mongose.model('productSale', productSaleSchema);
+let DataSet = mongose.models.productSale || mongose.model('productSale', productSaleSchema);
 
 export default DataSet;
