@@ -5,8 +5,9 @@ import { DataContext } from "../store/GlobaState";
 import { postData } from "../untils/fetchData";
 import { useRouter } from "next/router";
 import styles from "../styles/signin.module.scss";
-import { ROUTER } from "../untils/router";
 import { useHistory } from "react-router-dom";
+import Input from "../components/Input";
+import Button from "../components/Button";
 
 
 export default function Sigin() {
@@ -55,29 +56,35 @@ export default function Sigin() {
   }, [auth]);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} >
+      <img className={styles.img} src='https://res.cloudinary.com/nextecomerce/image/upload/v1631523410/next_media/cafe-5635015_1920_eiycst.jpg' alt='' height={600}/>
       <form onSubmit={handleSubmit} className={styles.form}>
-        <p className={styles.text}>Email</p>
-        <input
+      <div className={styles.wrapperForm}>
+      <p className={styles.titlePage}>Sigin</p>
+      <div>
+      <Input
           placeholder="Email"
           name="email"
           id="email"
           value={email}
+          label='Email'
+          ClassNameLabel={styles.text}
           className={styles.input}
           onChange={hanldeInputChangeValue}
         />
-        <p className={styles.text}>Pass</p>
-        <input
+       
+        <Input
           placeholder="passWord"
           name="password"
           id="password"
           value={password}
           className={styles.input}
+          label='Pass'
+          ClassNameLabel={styles.text}
           onChange={hanldeInputChangeValue}
         />
-        <button type="submit" className={styles.button}>
-          SignIn
-        </button>
+          <Button type="submit" className={styles.button} text='Sign'/>
+      </div>
         <p className={styles.text}>
           You don't have a account?
           <Link href="/register">
@@ -86,6 +93,7 @@ export default function Sigin() {
             </a>
           </Link>
         </p>
+        </div>
       </form>
     </div>
   );

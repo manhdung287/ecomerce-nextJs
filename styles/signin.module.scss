@@ -1,14 +1,31 @@
 .wrapper{
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    position: relative;
+
+}
+.img{
+    
 }
 .form{
     background: linear-gradient(to bottom,#2d91d5,#1875b3);
     border: 10px;
     box-shadow: 1px 1px 1px 1px,#eee;
-    padding: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.titlePage{
+    font-size: 22px;
+    color: var(--white);
+    text-align: center;
 }
 .text{
     color: #fff;
@@ -29,9 +46,12 @@
 .link{
     
 }
-@media screen and (min-width:450px){
-    .form{
-        width: 450px;
-        
+.wrapperForm{
+    padding: 40px;
+}
+@media only screen and(min-width:1439px) {
+    .wrapper{
+        width: 980px;
+        margin: auto;
     }
 }
