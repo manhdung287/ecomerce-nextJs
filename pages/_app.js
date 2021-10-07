@@ -1,15 +1,15 @@
 
-import Layout from "../components/Layout";
-import { Dataprovider } from "../store/GlobaState";
-import "../styles/index.scss";
+import Layout from "../src/components/Layout";
+import { Dataprovider } from "../src/store/GlobaState";
+import "../src/styles/index.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
-      <Dataprovider>
-           <Layout>
+    <Dataprovider>
+      <Layout>
         <Component {...pageProps} />
       </Layout>
-      </Dataprovider>
+    </Dataprovider>
   );
 }
 

@@ -65,7 +65,7 @@ function Categories({}) {
     dispath(DeleteItem(categories, category._id, "ADD_CATEGORIES"));
     setCloseModal(false);
   };
-  console.log(auth)
+
   return (
     <div className="category">
       Category

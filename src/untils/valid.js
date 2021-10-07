@@ -1,18 +1,24 @@
 const valid =(name,email,password,confirmpass)=>{
     if(!name || !email || !password){
-        return "Please add a feild"
+        return "Bạn chưa nhập dữ liệu"
     }
     if(!validateEmail(email)) {
-        return "This not Email"
+        return "Đây không phải Email"
     }
     if(password.length < 6){
-        return "PassWord has 6 character"
+        return "Mật khẩu phải có 6 ký tự"
     }
     if(password != confirmpass){
-        return "PassWord Confirm not math"
+        return "2 mật khẩu chưa khớp"
     }
 }
-function validateEmail(email) {
+
+export function validString(str){
+    if(str.length < 1)
+    return 'Bạn chưa nhập dữ liệu'
+}
+
+export function validateEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
   }

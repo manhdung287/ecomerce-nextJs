@@ -1,9 +1,9 @@
 import React from 'react';
-import connectDB from "../../../untils/connectDB";
 import valid from "../../../untils/valid";
 import bcrypt from 'bcrypt';
 import Users from '../../../models/userModel';
 import { createAccesstoken, createRefreshtoken } from '../../../untils/generateToken';
+import connectDB from '../../../src/untils/connectDB';
 connectDB();
 
 export default async(req,res)=>{

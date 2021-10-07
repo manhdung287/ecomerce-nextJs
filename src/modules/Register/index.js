@@ -1,15 +1,11 @@
 import Link from "next/link";
 import React, { useContext, useEffect, useState } from "react";
-import { DataContext } from "../src/store/GlobaState";
-import { postData } from "../src/untils/fetchData";
-import valid from "../src/untils/valid";
-import { useRouter } from "next/router";
-import { ROUTER } from "../src/untils/router";
-import Button from "../src/components/Button";
-import Input from "../src/components/Input";
 import Cookies from "js-cookie";
-import styles from '../src/styles/signin.module.scss';
+import styles from '../signin.module.scss';
 import { AiFillEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import Input from "../../components/Input";
+import Button from "../../components/Button";
+import { ROUTER } from "../../untils/router";
 
 
 const imageSiginURl = 'https://res.cloudinary.com/nextecomerce/image/upload/v1632218537/next_media/bgLogin_uahjju.jpg';
@@ -57,8 +53,6 @@ export default function Register() {
     localStorage.setItem("FirstLogin", true);
     router.push(ROUTER.home);
   };
-
-  console.log(state)
   return (
     <div className={styles.wrapper} >
       <div className={styles.container}
@@ -66,7 +60,6 @@ export default function Register() {
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.wrapperForm}>
             <a className={styles.titlePage} href={ROUTER.home}>KT Shop</a>
-
             <Input
               placeholder="Nhập emai đăng ký"
               name="name"

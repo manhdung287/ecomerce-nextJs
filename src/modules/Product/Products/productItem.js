@@ -1,11 +1,10 @@
 import { useRouter } from "next/router";
 import React, { useContext, useEffect, useState } from "react";
-import { AddToCart } from "../../store/Actions";
-import { DataContext } from "../../store/GlobaState";
-import { ROUTER } from "../../untils/router";
-import { CalculatorSalePrice } from "../../untils/valid";
-import Button from "../Button";
-import TextPrice from "../TextPrice";
+import Button from "../../../components/Button";
+import TextPrice from "../../../components/TextPrice";
+import { ROUTER } from "../../../untils/router";
+import { CalculatorSalePrice } from "../../../untils/valid";
+
 import styles from "./productItem.module.scss";
 
 function ProductItem({ data }) {
@@ -31,7 +30,6 @@ function ProductItem({ data }) {
   return (
     <div className={styles.wrapper}>
       <a href={ROUTER.productLink(data._id)} className={styles.imgWrapper}>
-    
         <img src={data.images[0].url} alt="null" className={styles.img} />
       </a>
       <div>

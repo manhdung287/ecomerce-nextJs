@@ -42,7 +42,7 @@ export default function Navbar() {
     getTotal();
   }, [cart]);
 
-  console.log(total);
+
   return (
     <div className={styles.container}>
       <Logo />

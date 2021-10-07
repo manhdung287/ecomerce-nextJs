@@ -14,7 +14,7 @@ function AdminProduct() {
         };
         loadData();
     },[data]);
-    console.log(data);
+ 
   return <div>AdminProduct</div>;
 }
 export default AdminProduct;

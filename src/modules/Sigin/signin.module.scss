@@ -1,0 +1,101 @@
+.wrapper {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 9999;
+  height: 100vh;
+  background: var(--white);
+}
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.titlePage {
+  font-size: 30px;
+  color: var(--black);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.passwordWrapper{
+    position: relative;
+}
+.iconPassword{
+    position: absolute;
+    bottom: 45px;
+    right: 5px;
+    z-index: 2;
+    font-size: 20px;
+    color: #214a80;
+}
+.iconPassword:hover{
+    cursor: pointer;
+}
+.text {
+  color: #000;
+  margin-bottom: 15px;
+}
+.input {
+  width: calc(100% - 23px);
+  border: none !important;
+  padding: 10px;
+  font-size: 14px;
+  color: #000;
+  border-radius: 0;
+  border-bottom: 1px solid #000 !important;
+  margin-bottom: 30px;
+}
+
+.button {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  color: #fff;
+  margin: 30px 0 60px;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #30759c, #26668b);
+}
+
+.link {
+  margin-left: 10px;
+  color: #1f5675;
+  font-weight: bold;
+}
+.img {
+  width: 100%;
+  height: 100%;
+}
+.wrapperForm {
+  padding: 25px;
+  border: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  background: #fff;
+  width: 350px;
+  height: auto;
+}
+@media only screen and(min-width:1439px) {
+    .button{
+      
+    }
+  .wrapperForm {
+    padding: 40px;
+    width: 350px;
+  }
+}

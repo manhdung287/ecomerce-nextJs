@@ -53,7 +53,7 @@ function OrderDetail(props) {
       dispath({type:"NOTIFY",payload:{success:res.msg}})
     });
   };
-  console.log(props.order);
+
   return (
     <div>
       <Button onClick={goback} text="Back" />

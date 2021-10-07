@@ -9,7 +9,7 @@ import Button from "./Button";
 function ListCartNavBar({ total }) {
   const [state, dispath] = useContext(DataContext);
   const { cart } = state;
-  console.log(cart);
+
   return (
     <div className={styles.wrapper}>
       {cart.map((item) => (

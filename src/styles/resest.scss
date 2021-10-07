@@ -59,3 +59,6 @@ input:focus {
 button:focus{
 	outline: none;
 }
+img{
+	pointer-events: none;
+}
